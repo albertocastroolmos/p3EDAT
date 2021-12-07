@@ -118,7 +118,7 @@ set output "differ"
 try {
 set output [exec diff -s $filename.ind ${filename}_control_del_01.ind]
 } trap CHILDSTATUS {} {}
-if {[regexp -nocase "identical" $output]} {
+if {[regexp -nocase "identical" $output] || [regexp -nocase "idénticos" $output]} {
     puts "3) files are identical, ;-)"
 } else {
     puts "3) files differ, :-("

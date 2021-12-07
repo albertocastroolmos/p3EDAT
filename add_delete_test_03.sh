@@ -188,7 +188,7 @@ set output "differ"
 try {
 set output [exec diff -s $filename.lst ${filename}_control_del_03.lst]
 } trap CHILDSTATUS {} {}
-if {[regexp -nocase "identical" $output]} {
+if {[regexp -nocase "identical" $output] || [regexp -nocase "idénticos" $output]} {
     puts "3) delete books files are identical, ;-)"
 } else {
     puts "3) files differ, :-("

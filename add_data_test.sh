@@ -66,7 +66,7 @@ set output "differ"
 try {
 set output [exec diff -s $filename.db ${filename}_control.db]
 } trap CHILDSTATUS {} {}
-if {[regexp -nocase "identical" $output]} {
+if {[regexp -nocase "identical" $output] || [regexp -nocase "idénticos" $output]} {
     puts "3) control and created files with booksare identical, ;-)"
 } else {
     puts "3) files differ, :-("

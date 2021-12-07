@@ -69,7 +69,7 @@ set output "differ"
 try {
 set output [exec diff -s $filename.ind ${filename}_control.ind]
 } trap CHILDSTATUS {} {}
-if {[regexp -nocase "identical" $output]} {
+if {[regexp -nocase "identical" $output] || [regexp -nocase "idénticos" $output]} {
     puts "3) control and created files with index are identical, ;-)"
 } else {
     puts "3) files differ, :-("
