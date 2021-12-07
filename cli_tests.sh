@@ -1,6 +1,9 @@
 #!/usr/bin/expect -f
 # 01
 # check command line error handling
+# NOTE: this test will fail if the program "library"
+# returns a value different from "0" (zero). That is,
+# your program should end with "return(0)"
 # ***************************************************
 # you may edit the following variables
 #      error message when no arguments are provided
