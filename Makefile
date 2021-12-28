@@ -26,3 +26,12 @@ bf:
 valgrind:
 	valgrind --leak-check=full ./$(EXE)
 
+best_fit:
+	./$(EXE) best_fit test
+
+worst_fit:
+	./$(EXE) worst_fit test
+
+first_fit:
+	./$(EXE) first_fit test
+
